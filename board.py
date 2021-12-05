@@ -1,11 +1,19 @@
-line1 = ['-', '-', '-']
-line2 = ['-', '-', '-']
-line3 = ['-', '-', '-']
+line1 = ""
+line2 = ""
+line3 = ""
 winner = ""
 player1 = {"Wins": 0, "Losses": 0}
 player2 = {"Wins": 0, "Losses": 0}
 total = 0
 cont = True
+
+
+def prime_board():
+    global line1, line2, line3, winner
+    line1 = ['-', '-', '-']
+    line2 = ['-', '-', '-']
+    line3 = ['-', '-', '-']
+    winner = ""
 
 
 def print_board():
@@ -66,6 +74,7 @@ def board_check():
 def play():
     global total
     game = True
+    prime_board()
     player = "2"
     symbol = "O"
     while game:
